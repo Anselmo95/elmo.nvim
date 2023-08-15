@@ -18,7 +18,7 @@ M.colors = {
   bright_gray = "#eeeeee",
   medium_sky_blue = "#87dfdf",
   black_olive = "#3a3a3a",
-  raisin_black = "#262626",
+  vampire_black = "#262626",
   ucla_blue = "#5f5f87",
   sea_blue = "#005f87",
   davys_grey = "#585858",
@@ -42,5 +42,9 @@ M.colors = {
   yellow_green_crayola = "#afdf87",
   jelly_bean = "#df5f5f",
 }
+
+M.get_colors = function ()
+  return M.colors
+end
 
 return M

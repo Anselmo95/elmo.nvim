@@ -1,7 +1,7 @@
 local M = {}
 
 M.setup  = function ()
-  local colors = require("elmo.colors")
+  local colors = require("elmo.colors").get_colors()
 
   local groups = {
     --
@@ -20,7 +20,7 @@ M.setup  = function ()
     DiffChange     = { fg = colors.laser_lemon }, -- Diff mode: Changed line |diff.txt|
     DiffDelete     = { fg = colors.jelly_bean }, -- Diff mode: Deleted line |diff.txt|
     DiffText       = { fg = colors.pastel_red, bg = colors.blood_red, bold = true }, -- Diff mode: Changed text within a changed line |diff.txt|
-    EndOfBuffer    = { fg = colors.raisin_black }, -- Filler lines (~) after the end of the buffer. By default, this is highlighted like |hl-NonText|.
+    EndOfBuffer    = { fg = colors.vampire_black }, -- Filler lines (~) after the end of the buffer. By default, this is highlighted like |hl-NonText|.
     -- TermCursor     = { bg = colors.fashion_fuchsia }, -- Cursor in a focused terminal
     -- TermCursorNC   = { }, -- Cursor in an unfocused terminal
     ErrorMsg       = { fg = colors.bright_gray, bg = colors.electric_red }, -- Error messages on the command line
@@ -42,13 +42,12 @@ M.setup  = function ()
     -- MsgSeparator   = { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
     MoreMsg        = { fg = colors.argent, bg = colors.true_blue }, -- |more-prompt|
     NonText        = { fg = colors.philippine_gray, bold = true }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
-    Normal         = { fg = colors.gainsboro }, -- Normal text
-    -- Normal         = { fg = colors.gainsboro, bg = colors.raisin_black }, -- Normal text
+    Normal         = { fg = colors.gainsboro, bg = colors.vampire_black }, -- Normal text
     -- NormalFloat    = { }, -- Normal text in floating windows.
     -- FloatBorder    = { }, -- Border of floating windows.
     -- FloatTitle     = { }, -- Title of floating windows.
     -- NormalNC       = { }, -- normal text in non-current windows
-    Pmenu          = { fg = colors.platinum, bg = colors.raisin_black }, -- Popup menu: Normal item.
+    Pmenu          = { fg = colors.platinum, bg = colors.vampire_black }, -- Popup menu: Normal item.
     PmenuSel       = { fg = colors.jelly_bean, bg = colors.outer_space, bold = true }, -- Popup menu: Selected item.
     -- PmenuKind      = { }, -- Popup menu: Normal item "kind"
     -- PmenuKindSel   = { }, -- Popup menu: Selected item "kind"
