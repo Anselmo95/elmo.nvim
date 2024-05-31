@@ -105,6 +105,7 @@ M.setup  = function ()
     -- Operator       = { }, --   "sizeof", "+", "*", etc.
     -- Keyword        = { }, --   any other keyword
     -- Exception      = { }, --   try, catch, throw
+    vhdlOperator   = { fg = colors.yellow_green_crayola }, -- =>, <=, and, or, etc
 
     PreProc        = { fg = colors.navajo_white }, -- (*) Generic Preprocessor
     -- Include        = { }, --   Preprocessor #include
