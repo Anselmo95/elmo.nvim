@@ -227,6 +227,16 @@ M.setup  = function ()
     ["@preproc"]         = { link = "PreProc" }, -- PreProc
     -- ["@debug"]           = { }, -- Debug
     -- ["@tag"]             = { }, -- Tag
+
+    -- VHDL
+    ["@module.vhdl"]             = { link = "@variable" },
+    ["@type.builtin.vhdl"]       = { link = "@Type" },
+    ["@constant.vhdl"]           = { link = "@variable" },
+    ["@type.definition.vhdl"]    = { link = "@variable" },
+    ["@label.vhdl"]              = { link = "@variable" },
+    ["@constructor.vhdl"]        = { link = "@keyword.vhdl" },
+    ["@constant.builtin.vhdl"]   = { link = "@number.vhdl" },
+    ["@operator.vhdl"]           = { link = "@keyword.vhdl" },
   }
 
   return groups
