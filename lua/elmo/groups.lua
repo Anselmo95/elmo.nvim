@@ -92,20 +92,19 @@ M.setup  = function ()
     String         = { fg = colors.light_cobalt_blue }, --   A string constant: "this is a string"
     Character      = { fg = colors.light_cobalt_blue }, --   A character constant: 'c', '\n'
     Number         = { fg = colors.medium_sky_blue }, --   A number constant: 234, 0xff
-    -- Boolean        = { }, --   A boolean constant: TRUE, false
+    Boolean        = { fg = colors.medium_sky_blue }, --   A boolean constant: TRUE, false
     Float          = { fg = colors.medium_sky_blue }, --   A floating point constant: 2.3e10
 
-    Identifier     = { fg = colors.macaroni_and_cheese }, -- (*) Any variable name
-    -- Function       = { }, --   Function name (also: methods for classes)
+    Identifier     = { fg = colors.white }, -- (*) Any variable name
+    Function       = { fg = colors.macaroni_and_cheese }, --   Function name (also: methods for classes)
 
     Statement      = { fg = colors.yellow_green_crayola }, -- (*) Any statement
-    -- Conditional    = { }, --   if, then, else, endif, switch, etc.
-    -- Repeat         = { }, --   for, do, while, etc.
-    -- Label          = { }, --   case, default, etc.
-    -- Operator       = { }, --   "sizeof", "+", "*", etc.
+    Conditional    = { fg = colors.yellow_green_crayola }, --   if, then, else, endif, switch, etc.
+    Repeat         = { fg = colors.yellow_green_crayola }, --   for, do, while, etc.
+    Label          = { fg = colors.white }, --   case, default, etc.
+    Operator       = { fg = colors.yellow_green_crayola }, --   "sizeof", "+", "*", etc.
     -- Keyword        = { }, --   any other keyword
     -- Exception      = { }, --   try, catch, throw
-    vhdlOperator   = { fg = colors.yellow_green_crayola }, -- =>, <=, and, or, etc
 
     PreProc        = { fg = colors.navajo_white }, -- (*) Generic Preprocessor
     -- Include        = { }, --   Preprocessor #include
@@ -217,7 +216,7 @@ M.setup  = function ()
     -- ["@operator"]        = { }, -- Operator
     -- ["@keyword"]         = { }, -- Keyword
     -- ["@exception"]       = { }, -- Exception
-    -- ["@variable"]        = { }, -- Identifier
+    ["@variable"]        = { link = "Identifier" }, -- Identifier
     ["@type"]            = { link = "Type" }, -- Type
     -- ["@type.definition"] = { }, -- Typedef
     -- ["@storageclass"]    = { }, -- StorageClass
@@ -237,6 +236,9 @@ M.setup  = function ()
     ["@constructor.vhdl"]        = { link = "@keyword.vhdl" },
     ["@constant.builtin.vhdl"]   = { link = "@number.vhdl" },
     ["@operator.vhdl"]           = { link = "@keyword.vhdl" },
+
+    -- Cpp
+    ["@lsp.type.namespace.cpp"]      = { link = "Function" },
   }
 
   return groups
