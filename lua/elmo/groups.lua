@@ -232,6 +232,7 @@ M.setup  = function ()
     ["@type.builtin.vhdl"]       = { link = "@Type" },
     ["@constant.vhdl"]           = { link = "@variable" },
     ["@type.definition.vhdl"]    = { link = "@variable" },
+    ["@lsp.type.namespace.vhdl"] = { link = "@label.vhdl" },
     ["@label.vhdl"]              = { link = "@variable" },
     ["@constructor.vhdl"]        = { link = "@keyword.vhdl" },
     ["@constant.builtin.vhdl"]   = { link = "@number.vhdl" },
